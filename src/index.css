@@ -151,3 +151,7 @@
 @theme {
   --font-sans: "Poppins", sans-serif;
 }
+
+body {
+  @apply bg-[#f8f8f8];
+}
