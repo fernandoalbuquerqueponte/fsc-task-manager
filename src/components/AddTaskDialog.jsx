@@ -19,12 +19,15 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
     if (!isOpen) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setTitle("")
-      setTime("")
+      setTime("morning")
       setDescription("")
     }
   }, [isOpen])
 
   const handleSaveClick = () => {
+    if (!title.trim() || time.trim() || !description.trim()) {
+      return alert("Preencha todos os campos")
+    }
     handleSubmit({
       id: uuid(),
       title,
