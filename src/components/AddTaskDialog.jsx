@@ -80,7 +80,7 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
             ref={nodeRef}
             className="fixed bottom-0 left-0 top-0 flex h-screen w-screen items-center justify-center backdrop-blur"
           >
-            <div className="w-84 rounded-xl bg-white p-5 text-center shadow">
+            <div className="w-96 rounded-xl bg-white p-5 text-center shadow">
               <h2 className="text-xl font-semibold text-brand-dark-blue">
                 Nova Tarefa
               </h2>
@@ -110,7 +110,7 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
                 <div className="flex items-center gap-3">
                   <Button
                     onClick={handleClose}
-                    variant="secondary"
+                    color="secondary"
                     size="large"
                     className="w-full"
                   >
