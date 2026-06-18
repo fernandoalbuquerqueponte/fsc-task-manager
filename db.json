@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Comprar pão",
+      "description": "Comprpar pao na padaria",
+      "time": "morning",
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "title": "Comprar leite",
+      "description": "Comprpar leite na padaria",
+      "time": "morning",
+      "status": "done"
+    },
+    {
+      "id": 3,
+      "title": "Estudar programação",
+      "description": "Estudar React e JavaScript",
+      "time": "afternoon",
+      "status": "in_progress"
+    },
+    {
+      "id": 4,
+      "title": "Ir para academia",
+      "description": "Ir para academia e fazer exercícios",
+      "time": "afternoon",
+      "status": "in_progress"
+    },
+    {
+      "id": 5,
+      "title": "Ler um livro",
+      "description": "Ler um livro de programação",
+      "time": "evening",
+      "status": "not_started"
+    },
+    {
+      "id": 6,
+      "title": "Descansar",
+      "description": "Descansar e relaxar após o dia",
+      "time": "evening",
+      "status": "not_started"
+    }
+  ]
+}
