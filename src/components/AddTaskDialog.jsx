@@ -78,13 +78,13 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
         {createPortal(
           <div
             ref={nodeRef}
-            className="fixed top-0 bottom-0 left-0 flex h-screen w-screen items-center justify-center backdrop-blur"
+            className="fixed bottom-0 left-0 top-0 flex h-screen w-screen items-center justify-center backdrop-blur"
           >
             <div className="w-84 rounded-xl bg-white p-5 text-center shadow">
-              <h2 className="text-xl font-semibold text-[#35383E]">
+              <h2 className="text-xl font-semibold text-brand-dark-blue">
                 Nova Tarefa
               </h2>
-              <p className="mt-1 mb-4 text-sm text-[#9A9C9F]">
+              <p className="mb-4 mt-1 text-sm text-brand-dark-blue">
                 Insira as informações abaixo
               </p>
 

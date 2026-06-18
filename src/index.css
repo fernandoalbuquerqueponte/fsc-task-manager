@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ===================== */
 /*  FONTS                */
@@ -148,10 +150,6 @@
   font-display: swap;
 }
 
-@theme {
-  --font-sans: "Poppins", sans-serif;
-}
-
 body {
-  @apply bg-[#f8f8f8];
+  @apply font-poppins bg-brand-background;
 }
