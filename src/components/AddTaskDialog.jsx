@@ -59,6 +59,15 @@ const AddTaskDialog = ({
     })
   }
 
+  const handleCancelClick = () => {
+    reset({
+      title: "",
+      time: "morning",
+      description: "",
+    })
+    handleClose()
+  }
+
   return (
     <CSSTransition
       nodeRef={nodeRef}
@@ -135,7 +144,7 @@ const AddTaskDialog = ({
 
                 <div className="flex items-center gap-3">
                   <Button
-                    onClick={handleClose}
+                    onClick={handleCancelClick}
                     type="button"
                     color="secondary"
                     size="large"
