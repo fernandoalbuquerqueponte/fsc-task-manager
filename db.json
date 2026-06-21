@@ -1,13 +1,6 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "title": "Compras",
-      "description": "Comprpar pao na padaria",
-      "time": "morning",
-      "status": "done"
-    },
-    {
       "id": "2",
       "title": "Comprar leite",
       "description": "Comprpar leite na padaria",
