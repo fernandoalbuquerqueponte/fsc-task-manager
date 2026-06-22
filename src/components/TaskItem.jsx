@@ -1,4 +1,3 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { Link } from "react-router-dom"
 import { toast } from "sonner"
 
@@ -9,31 +8,16 @@ import {
   TrashIcon,
 } from "../assets/icons/index"
 import Button from "../components/Button"
-
+import { useDeleteTask } from "../hooks/data/use-delete-task"
 const TaskItem = ({ task, handleCheckboxClick }) => {
-  const queryClient = useQueryClient()
-  const { mutate, isPending: deleteIsLoading } = useMutation({
-    mutationKey: ["deleteTask", task.id],
-    mutationFn: async () => {
-      const response = await fetch(`http://localhost:3000/tasks/${task.id}`, {
-        method: "DELETE",
-      })
-
-      return response.json()
-    },
-  })
+  const { mutate: deleteTask, isPending: deleteIsLoading } = useDeleteTask(
+    task.id
+  )
 
   const handleDeleteClick = async () => {
-    mutate(undefined, {
-      onSuccess: () => {
-        queryClient.setQueryData(["tasks"], (currentTasks) => {
-          return currentTasks.filter((oldTask) => oldTask.id !== task.id)
-        })
-        toast.success("Tarefa deletada com sucesso!")
-      },
-      onError: () => {
-        toast.error("Erro ao deletar tarefa.")
-      },
+    deleteTask(undefined, {
+      onSuccess: () => toast.success("Tarefa deletada com sucesso!"),
+      onError: () => toast.error("Erro ao deletar tarefa."),
     })
   }
 
